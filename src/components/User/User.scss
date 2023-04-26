@@ -1,0 +1,59 @@
+@import '../../styles/styles';
+
+.user {
+  display: flex;
+  justify-content: space-evenly;
+  width: 150px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    color: white;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: var(--font-normal);
+  }
+
+  &__avatar-container {
+    height: 44px;
+    aspect-ratio: 1/1;
+    background-color: var(--color-dark);
+    border-radius: 50%;
+    @include flex(row, center, center)
+  }
+
+  &__avatar-img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color:white
+  }
+
+  &__btn {
+    width: 70px;
+    // border: 1px solid;
+    border-radius: 4px;
+    padding: 3px 5px;
+    height: min-content;
+    font-size: 12px;
+    font-family: var(--font-normal);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .btn {
+    &--login {
+      font-size: 14px;
+      padding: 5px;
+      @include btn-hover(var(--color-dark), var(--color-accent1))
+    }
+
+    &--logout {
+      @include btn-hover(var(--color-accent1), var(--color-light))
+    }
+  }
+}

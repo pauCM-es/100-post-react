@@ -1,0 +1,30 @@
+
+@mixin truncate ($font-size, $line-height, $max-lines) {
+  max-height: calc($line-height * $max-lines);
+  font-size: $font-size;
+  line-height: $line-height;
+
+  display: -webkit-box;
+  -webkit-line-clamp: $max-lines;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  word-break: break-all;
+  hyphens: auto;
+
+}
+
+@mixin btn-hover ($color, $color-hover) {
+  color: $color;
+
+  &:hover {
+    background-color: $color;
+    color: $color-hover
+  }
+}
+
+@mixin flex ($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

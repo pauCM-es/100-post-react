@@ -1,0 +1,132 @@
+@import '../../../styles/styles';
+
+.post-edit__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+
+  .editForm {
+    width: 300px;
+    border: 1px solid rgb(52, 52, 52);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+      --header-height: 50px;
+      display: flex;
+      height: var(--header-height);
+      background-color: var(--color-dark);
+      margin-bottom: 10px;
+    }
+
+    &__id {
+      height: 100%;
+      aspect-ratio: 2/1;
+      background-color: var(--color-accent2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      color: var(--color-light);
+      font-size: 1.2rem;
+      font-family: var(--font-accent3);
+    }
+
+    &__user {
+      width: 100%;
+      font-size: 20px;
+      font-family: var(--font-normal);
+      color: var(--color-accent1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .form-field {
+      margin: 10px;  
+      padding: 5px 10px;
+      border: 1px solid rgb(193, 193, 193);
+      border-radius: 4px;
+      background-color: #efeeee;
+      resize: vertical;
+      overflow-y: scroll;
+      &::-webkit-scrollbar{
+        width: 10px;
+
+        &-corner {
+          background-color: var(--color-accent1);
+        }
+      }
+      
+      &:focus {
+        outline: none;
+        border: 2px solid var(--color-accent1);
+        background-color: transparent;
+      }
+    }
+
+    .form-label {
+      padding: 5px 10px;
+      font-family: var(--font-accent4);
+
+    }
+
+    &__title {
+      font-size: 18px;
+      font-family: var(--font-serif);
+      color: var(--font-color1);
+      text-transform: uppercase;
+    }
+    
+    &__content {
+      font-size: 16px;
+      font-family: var(--font-serif);
+      color: var(--font-color1);
+      text-align: justify;
+    }
+
+    &__buttons {
+      height: 40px;
+      width: 100%;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 15px 0 10px ;
+    }
+      
+    &__btn {
+      width: 100px;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 4px;
+      font-family: var(--font-normal);
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.288);
+      }
+      &:focus {
+        outline: var(--color-accent1) solid 2px;
+      }
+      
+      &--warning {
+        @include btn-hover (#ffc400, white)
+      }
+      &--success {
+        @include btn-hover (teal, white)
+      }
+      &--cancel {
+        @include btn-hover (#d71156, white)
+      }
+      &--disable {
+        @include btn-hover (#b8b6b6, white)
+      }
+    }
+  }
+}

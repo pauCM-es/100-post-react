@@ -1,0 +1,55 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Bungee+Inline&family=Bungee+Shade&family=DM+Serif+Display&family=Francois+One&family=Rammetto+One&family=Roboto:wght@300;400&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --color-light: #ebe9e9;
+  --color-dark: #28262f;
+  --color-accent1: #5acbd5;
+  --color-accent2: #ff6060;
+
+  --font-normal: 'Roboto', sans-serif;
+  --font-serif: 'DM Serif Display', serif;
+  --font-accent1: 'Barrio', cursive;
+  --font-accent2: 'Bungee Inline', cursive;
+  --font-accent3: 'Bungee Shade', cursive;
+  --font-accent4: 'Francois One', sans-serif;
+  --font-accent5: 'Rammetto One', cursive;
+
+  --font-color1: black;
+  --font-color2: white;
+}

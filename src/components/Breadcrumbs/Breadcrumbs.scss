@@ -1,0 +1,25 @@
+.breadcrumbs {
+  height: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+
+  .crumb {
+    width: fit-content;
+    padding: 0 20px;
+    margin-right: 2px;
+    clip-path: polygon(10px 50%,0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
+
+    &--active {
+      color: var(--color-dark);
+      background-color: var(--color-accent2);
+    }
+    
+    &--not-active {
+      color: var(--color-dark);
+      background-color: var(--color-accent1);
+
+    }
+  }
+}

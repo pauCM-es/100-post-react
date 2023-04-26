@@ -1,0 +1,44 @@
+
+
+.nav {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: var(--color-accent2);
+  z-index: 60;
+
+  &__breadcrumbs {
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  &__logo {
+    font-family: var(--font-accent5);
+    font-size: 40px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    text-shadow: 4px 4px  var(--color-accent1);
+  }
+
+  &__user {
+    position: absolute;
+    right: 20px;
+  }
+
+
+}
+
+@media(max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  
+  .nav__user {
+    display: none;
+  }
+
+}

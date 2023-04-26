@@ -1,0 +1,152 @@
+@import '../../styles/styles';
+
+.login {
+  @include flex(row, center, center);
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: var(--color-light);
+  background-image: url(https://img.freepik.com/free-vector/old-retro-background-with-grunge-texture_36662-1293.jpg?w=1380&t=st=1681724538~exp=1681725138~hmac=f1dd42b540500435adc7008ff0f87247ef621bd365a94f116747eb483ad4e3e8);
+  background-size: cover;
+  background-position: center;
+
+  &__card {
+    position: absolute;
+    top: 100px;
+    @include flex(column, start, center);
+    min-width: 300px;
+    max-width: 500px;
+    width: 40%;
+    aspect-ratio: 1/1.5;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(10px);
+    
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      height: 220px;
+      width: 100%;
+      background-color: var(--color-accent1);
+      clip-path: polygon(0 0, 100% 0, 100% 150px, 0 100%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      height: 200px;
+      width: 100%;
+      background-color: var(--color-dark);
+      clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100%);
+    }
+  }
+  .card__title {
+    padding: 2rem 0 1rem;
+    height: fit-content;
+    z-index: 3;
+    color: white;
+    font-size: 24px;
+    font-family: var(--font-accent4);
+    text-align: center;
+  }
+
+  .card__content {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    z-index: 20;
+    @include flex(column, start, center);
+  }
+
+  .form__icon-container {
+    z-index: 30;
+    width: 60px;
+    aspect-ratio: 1/1;
+    background-color: var(--color-dark);
+    color: white;
+    border-radius: 50%;
+    @include flex(row, center, center);
+
+    .form__avatar {
+      z-index: 40;
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  .form__content {
+    min-width: 250px;
+    width: 80%;
+    aspect-ratio: 1/1;
+    padding: 50px 15px;
+    border-radius: 4px;
+    background-color: white;
+
+    @include flex(column, center, center);
+    position: absolute;
+    top: 30px;
+
+  }
+
+  .form__field {
+    margin: 10px 0;
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    & span {
+      background-color: var(--color-accent1);
+      width: 70px;
+      @include flex(row, center, center);
+      border-radius: 5px 0 0 5px;
+
+    }
+  }
+
+  .form__input {
+    color: var(--color-dark);
+    font-size: 16px;
+    width: calc(100% - 70px);
+    height: 100%;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(236, 236, 236);
+    border-radius: 0 5px 5px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--error {
+      color: rgb(158, 12, 12);
+      font-size: 12px;
+      font-family: var(--font-normal);
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  
+  .form__icon {
+    color: var(--color-dark);
+    width: 30px;
+    height: 30px;
+  }
+
+  .form__btn {
+    width: 200px;
+    height: 40px;
+    background-color: var(--color-accent2);
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: var(--font-accent4);
+    margin-top: 50px;
+  }
+  
+  .btn--submit {
+    @include btn-hover( var(--color-dark), var(--color-accent2))
+  }
+}
